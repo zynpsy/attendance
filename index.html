@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devamsızlık Takip</title>
+    <title>Devamsızlık Takip Sistemi</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,100 +39,18 @@
 
 <script>
     const students = [
-        {
-    name: "U*** A****",
-    records: [
-        { date: "2025-02-28", status: "Gelmedi" },
-        { date: "2025-03-07", status: "Geldi" },
-        { date: "2025-03-14", status: "Geldi" },
-        { date: "2025-03-21", status: "Geldi" },
-        { date: "2025-04-11", status: "Gelmedi" },
-        { date: "2025-04-18", status: "Geldi" },
-        { date: "2025-04-25", status: "Geldi" }
-         ]
-        },
-        {
-            name: "M****** A****",
-            absences: ["2025-02-20", "2025-03-05", "2025-04-10"]
-        },
-        {
-            name: "B**** Ba***",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "E*** Ba*****",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "Yu*** G***** Ç********",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "G***** Çe***",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "Da*** C*****",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "G***** Du******",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "M***** U**** E******",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "S*** G****",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "A** Y**** K****",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "İ****** K**********",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "M****** Kö******",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "B******* Şa***",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "E****** Şa****",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "M***** Ta***",
-            absences: ["2025-03-01", "2025-03-15"]
-        }
-        ,
-        {
-            name: "E*** T*********",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "İ**** İp**",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "M***** Ya****",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "Z**** Y********",
-            absences: ["2025-03-01", "2025-03-15"]
-        },
-        {
-            name: "Z***** S*** Y****",
-            absences: ["2025-03-01", "2025-03-15"]
-        }
+        { name: "U*** A****", records: [ {date: "2025-02-28", status: "Gelmedi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Gelmedi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
+        { name: "M****** A****", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Gelmedi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
+        { name: "B**** B****", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Gelmedi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
+        { name: "E*** B*****", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Gelmedi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Gelmedi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
+        { name: "Yu*** G***** Ç********", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Gelmedi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Gelmedi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
+        { name: "G***** Çe***", records: [ {date: "2025-02-28", status: "Gelmedi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Gelmedi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Gelmedi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
+        { name: "Da*** C*****", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Gelmedi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Gelmedi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Gelmedi"} ] },
+        { name: "G***** Du******", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Gelmedi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Gelmedi"} ] },
+        { name: "M***** U**** E******", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
+        { name: "S*** G****", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] }
     ];
+
     const listContainer = document.getElementById('student-list');
 
     students.forEach((student, index) => {
@@ -144,10 +62,13 @@
             const detailsDiv = document.getElementById(`details-${index}`);
             if (detailsDiv.style.display === 'none' || detailsDiv.style.display === '') {
                 detailsDiv.style.display = 'block';
+                const totalAbsent = student.records.filter(r => r.status === "Gelmedi").length;
+                const totalPresent = student.records.filter(r => r.status === "Geldi").length;
                 detailsDiv.innerHTML = `
-                    <p>Toplam Devamsızlık: ${student.records.length}</p>
+                    <p>Toplam Devamsızlık: ${totalAbsent}</p>
+                    <p>Toplam Katılım: ${totalPresent}</p>
                     <div class="date-list">
-                        ${student.records.map(date => `<div>${date}</div>`).join('')}
+                        ${student.records.map(r => `<div>${r.date}: ${r.status}</div>`).join('')}
                     </div>
                 `;
             } else {
@@ -161,4 +82,3 @@
 
 </body>
 </html>
-
