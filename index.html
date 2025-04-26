@@ -39,16 +39,69 @@
 
 <script>
     const students = [
-        { name: "U*** A****", records: [ {date: "2025-02-28", status: "Gelmedi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Gelmedi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
-        { name: "M****** A****", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Gelmedi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
-        { name: "B**** B****", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Gelmedi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
-        { name: "E*** B*****", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Gelmedi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Gelmedi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
-        { name: "Yu*** G***** Ç********", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Gelmedi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Gelmedi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
-        { name: "G***** Çe***", records: [ {date: "2025-02-28", status: "Gelmedi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Gelmedi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Gelmedi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
-        { name: "Da*** C*****", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Gelmedi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Gelmedi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Gelmedi"} ] },
-        { name: "G***** Du******", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Gelmedi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Gelmedi"} ] },
-        { name: "M***** U**** E******", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] },
-        { name: "S*** G****", records: [ {date: "2025-02-28", status: "Geldi"}, {date: "2025-03-07", status: "Geldi"}, {date: "2025-03-14", status: "Geldi"}, {date: "2025-03-21", status: "Geldi"}, {date: "2025-04-11", status: "Geldi"}, {date: "2025-04-18", status: "Geldi"}, {date: "2025-04-25", status: "Geldi"} ] }
+        { name: "U*** A****", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "M****** A****", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "B**** Ba***", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "E*** Ba*****", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "Yu*** G***** Ç********", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "G***** Çe***", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "Da*** C*****", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "G***** Du******", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "M***** U**** E******", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "S*** G****", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "A** Y**** K****", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "İ****** K**********", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "M****** Kö******", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "B******* Şa***", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "E****** Şa****", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "M***** Ta***", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "E*** T*********", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "İ**** İp**", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "M***** Ya****", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "Z**** Y********", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] },
+        { name: "Z***** S*** Y****", records: [
+            { date: "2025-02-28", status: "" },{ date: "2025-03-07", status: "" },{ date: "2025-03-14", status: "" },{ date: "2025-03-21", status: "" },{ date: "2025-04-11", status: "" },{ date: "2025-04-18", status: "" },{ date: "2025-04-25", status: "" }
+        ] }
     ];
 
     const listContainer = document.getElementById('student-list');
@@ -62,13 +115,9 @@
             const detailsDiv = document.getElementById(`details-${index}`);
             if (detailsDiv.style.display === 'none' || detailsDiv.style.display === '') {
                 detailsDiv.style.display = 'block';
-                const totalAbsent = student.records.filter(r => r.status === "Gelmedi").length;
-                const totalPresent = student.records.filter(r => r.status === "Geldi").length;
                 detailsDiv.innerHTML = `
-                    <p>Toplam Devamsızlık: ${totalAbsent}</p>
-                    <p>Toplam Katılım: ${totalPresent}</p>
                     <div class="date-list">
-                        ${student.records.map(r => `<div>${r.date}: ${r.status}</div>`).join('')}
+                        ${student.records.map(r => `<div>${r.date}: ${r.status || "-"}</div>`).join('')}
                     </div>
                 `;
             } else {
