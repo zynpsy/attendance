@@ -133,31 +133,30 @@
             absences: ["2025-03-01", "2025-03-15"]
         }
     ];
-
     const listContainer = document.getElementById('student-list');
 
-studentDiv.addEventListener('click', () => {
-    const detailsDiv = document.getElementById(`details-${index}`);
-    if (detailsDiv.style.display === 'none' || detailsDiv.style.display === '') {
-        detailsDiv.style.display = 'block';
+    students.forEach((student, index) => {
+        const studentDiv = document.createElement('div');
+        studentDiv.className = 'student';
+        studentDiv.innerHTML = `<strong>${student.name}</strong><div class="details" id="details-${index}"></div>`;
 
-        if (student.records) {
-            const totalAbsent = student.records.filter(r => r.status === "Gelmedi").length;
-            const totalPresent = student.records.filter(r => r.status === "Geldi").length;
-            detailsDiv.innerHTML = `
-                <p>Toplam Devamsızlık: ${totalAbsent}</p>
-                <p>Toplam Katılım: ${totalPresent}</p>
-                <div class="date-list">
-                    ${student.records.map(r => `<div>${r.date}: ${r.status}</div>`).join('')}
-                </div>
-            `;
-        } else {
-            detailsDiv.innerHTML = `<p>Veri bulunamadı.</p>`;
-        }
-    } else {
-        detailsDiv.style.display = 'none';
-    }
-});
+        studentDiv.addEventListener('click', () => {
+            const detailsDiv = document.getElementById(`details-${index}`);
+            if (detailsDiv.style.display === 'none' || detailsDiv.style.display === '') {
+                detailsDiv.style.display = 'block';
+                detailsDiv.innerHTML = `
+                    <p>Toplam Devamsızlık: ${student.records.length}</p>
+                    <div class="date-list">
+                        ${student.records.map(date => `<div>${date}</div>`).join('')}
+                    </div>
+                `;
+            } else {
+                detailsDiv.style.display = 'none';
+            }
+        });
+
+        listContainer.appendChild(studentDiv);
+    });
 </script>
 
 </body>
