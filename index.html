@@ -146,9 +146,9 @@
             if (detailsDiv.style.display === 'none' || detailsDiv.style.display === '') {
                 detailsDiv.style.display = 'block';
                 detailsDiv.innerHTML = `
-                    <p>Toplam Devamsızlık: ${student.absences.length}</p>
+                    <p>Toplam Devamsızlık: ${student.records.length}</p>
                     <div class="date-list">
-                        ${student.absences.map(date => `<div>${date}</div>`).join('')}
+                        ${student.records.map(date => `<div>${date}</div>`).join('')}
                     </div>
                 `;
             } else {
